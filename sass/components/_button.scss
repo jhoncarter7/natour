@@ -1,0 +1,97 @@
+.btn {
+
+    &:link,
+    &:visited {
+        text-transform: uppercase;
+        text-decoration: none;
+        padding: 1.2rem 1.5rem;
+        border-radius: 10rem;
+        display: inline-block;
+        transition: all .14s;
+        position: relative;
+        font-size: 1.6rem;
+    }
+
+    &:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 1rem 2rem rgba(56, 23, 23, 0.455);
+
+        &::after {
+            transform: scaleX(1.2) scaleY(1.6);
+            opacity: 0;
+        }
+    }
+
+    &:active {
+        transform: translateY(-4px);
+        box-shadow: 0 1rem 1.3rem rgba(56, 23, 23, 0.285);
+    }
+
+    &--white {
+        background-color: $color-white;
+        color: $color-brown-light;
+
+        &::after {
+            background-color: $color-white;
+        }
+
+    }
+    &--green {
+        background-color: $primary-color;
+        color: $color-white;
+
+        &::after {
+            background-color: $primary-color;
+        }
+
+    }
+
+    &::after {
+        content: "";
+        display: inline-block;
+        height: 100%;
+        width: 100%;
+        border-radius: 10rem;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        transition: all .4s;
+    }
+
+    &--animated {
+        animation: moveButton .5s ease-out .75s;
+        animation-fill-mode: backwards;
+    }
+}
+
+.btn-text {
+
+    &:link,
+    &:visited {
+
+        font-size: 1.6rem;
+        font-weight: 700;
+        display: inline-block;
+        color: $primary-color;
+        text-decoration: none;
+        transition: all .2s;
+      
+        border-bottom: 1px solid $primary-color;
+        padding: 3px;
+        // box-shadow: 0 1rem 3rem rgba(56, 23, 23, 0.285);
+       
+    }
+
+    &:hover {
+        background-color: $primary-color;
+        transform: translateY(-3px);
+        box-shadow: 0 1rem 1.7rem $color-brown-light;
+        color: $color-white;
+    }
+
+    &:active{
+        box-shadow: 0 .5rem 1rem $color-brown-light;
+        transform: translateY(0);
+    }
+}
