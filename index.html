@@ -7,8 +7,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 
-    <link href="https://fonts.googleapis.com/css2?family=Lato:100;300;400;700;900&family=Poppins:ital@1&display=swap"
-        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=Poppins:ital@1&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="css/icon_font.css">
     <link rel="stylesheet" href="./css/style.css">
     <link rel="shortcut icon" href="./img/favicon.png" type="image/x-icon">
@@ -149,7 +151,7 @@
                                     <p class="card_price-only">only</p>
                                     <p class="card_price-value">$301</p>
                                 </div>
-                                <a href="#" class="btn btn--white">Book now</a>
+                                <a href="#popup" class="btn btn--white">Book now</a>
                             </div>
                         </div>
                     </div>
@@ -179,7 +181,7 @@
                                     <p class="card_price-only">only</p>
                                     <p class="card_price-value">$575</p>
                                 </div>
-                                <a href="#" class="btn btn--white">Book now</a>
+                                <a href="#popup" class="btn btn--white">Book now</a>
                             </div>
                         </div>
                     </div>
@@ -209,7 +211,7 @@
                                     <p class="card_price-only">only</p>
                                     <p class="card_price-value">$851</p>
                                 </div>
-                                <a href="#" class="btn btn--white">Book now</a>
+                                <a href="#popup" class="btn btn--white">Book now</a>
                             </div>
                         </div>
                     </div>
@@ -352,14 +354,15 @@
         </div>
     </footer>
 
-    <div class="popup">
-      <div class="popup_content">&nbsp;
+    <div class="popup" id="popup">
+      <div class="popup_content">
 
         <div class="popup_left">
             <img src="/img/nat-8.jpg" alt="" class="popup_img">
             <img src="/img/nat-9.jpg" alt="" class="popup_img">
         </div>
         <div class="popup_right">
+            <a href="#section_tour" class="popup_close">&times;</a>
             <h2 class="heading-secondary u-bottom-small">
                 start booking now
             </h2>

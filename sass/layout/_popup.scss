@@ -7,18 +7,24 @@
     left: 0;
     background-color: $color-grey-dark;
     z-index: 500;
+    opacity: 0;
+    visibility: hidden;
+    transition: all .3s;
 
+  
 
     &_content {
         width: 75%;
         top: 50%;
         left: 50%;
-        transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%) scale(.5);
         position: absolute;
         background-color: $color-white;
         display: table;
         overflow: hidden;
         height: 50rem;
+        opacity: 0;
+        transition: all .4s .2s;
     }
 
     &_left {
@@ -27,7 +33,7 @@
     }
 
     &_right {
-        width: 66.6666667%;
+        width: 57.666667%;
         display: table-cell;
         vertical-align: middle;
         padding: 3rem 5rem;
@@ -37,6 +43,7 @@
         display: block;
         width: 100%;
     }
+
 
     &_text {
         font-size: 1.8rem;
@@ -49,7 +56,35 @@
         -webkit-hyphens: auto;
         hyphens: auto;
        
-      
+    }
+
+
+    // for opening of popup and closing
+    &:target {
+        opacity: 1;
+       visibility: visible;
+    }
+
+    &:target &_content{
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1);
+    }
+
+    &_close{
+        &:link,
+        &:visited{
+
+            position: absolute;
+            top: 2rem;
+            right: 3rem;
+            font-size: 3rem;
+            text-decoration: none;
+            color: $color-grey-dark;
+
+            &:hover{
+                color: $primary-color;
+            }
+        }
 
     }
 }
