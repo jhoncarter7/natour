@@ -1,3 +1,6 @@
+* {
+  scroll-behavior: smooth; }
+
 @keyframes moveLeft {
   0% {
     transform: translateX(-10rem);
