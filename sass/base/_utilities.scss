@@ -7,7 +7,14 @@
 }
 .u-bottom-large{
     margin-bottom: 8rem;
+
+    @include respond (tab-port){
+        margin-bottom: 5rem;
+    }
 }
 .u-bottom-huge{
     margin-top: 14rem;
+    @include respond (tab-port){
+        margin-top: 10rem;
+    }
 }

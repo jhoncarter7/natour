@@ -4,7 +4,11 @@ body {
     /* font-size: 16px; */
     line-height: 1.7;
     color: $color-brown-light;
-    padding: 1.2rem;
+    
+
+    @include respond (phone){
+        padding: 0;
+    }
 
 }
 
@@ -19,6 +23,11 @@ body {
         font-size: 6rem;
         font-weight: 700;
         animation: moveLeft 2s ease-out;
+        @include respond (phone){
+            letter-spacing: .5rem;
+            font-size: 3rem;
+        }
+    
     }
 
     &--sub {
@@ -28,6 +37,10 @@ body {
         font-weight: 300;
         animation: moveRight 2s ease-out;
         margin-bottom: 6rem;
+        @include respond (phone){
+            letter-spacing: .5rem;
+          
+        }
     }
 }
 
@@ -41,6 +54,10 @@ body {
     color: transparent;
     transition: all .2s;
     letter-spacing: 2px;
+    @include respond (phone){
+        font-size: 2rem;
+      
+    }
 
     &:hover{
         transform: skewY(2deg) skewX(15deg) scale(1.1); 
@@ -53,6 +70,9 @@ body {
     font-weight: 700;
     text-transform: uppercase;
     margin-bottom: 2rem;
+    @include respond (tab-port){
+        margin-bottom: 0rem;
+    }
 
 }
 

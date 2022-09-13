@@ -55,6 +55,10 @@
   &_radio-group {
     width: 49%;
     display: inline-block;
+    @include respond (tab-port){
+      width: 100%;
+  }
+  
 
   }
 

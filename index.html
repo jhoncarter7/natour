@@ -5,13 +5,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Natour| Exciting tours for adventures people</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=Poppins:ital@1&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="css/icon_font.css">
+    <!-- <link rel="stylesheet" href="css/icon_font.css"> -->
     <link rel="stylesheet" href="./css/style.css">
     <link rel="shortcut icon" href="./img/favicon.png" type="image/x-icon">
 </head>
@@ -72,9 +72,26 @@
                 </div>
                 <div class="col-1-of-2">
                     <div class="composition">
-                        <img src="./img/nat-1-large.jpg" alt="" class="composition__photo composition__photo--p1">
+                        <img srcset="/img/nat-1.jpg 300w, /img/nat-1-large.jpg 1000w" 
+                        sizes="(max-width: 56.25em) 20vw, (max-width: 37.5em) 30vw, 18.75em"
+                         alt="pic-1" 
+                         src= "/img/nat-1-large.jpg"
+                         class="composition__photo composition__photo--p1">
+
+                         <img  srcset="/img/nat-2.jpg 300w, /img/nat-2-large.jpg 1000w"  
+                         sizes="(max-width: 56.25em) 20vw, (max-width: 37.5em) 30vw, 18.75em"
+                         alt="pic-2" 
+                         src="/img/nat-2-large.jpg"
+                         class="composition__photo composition__photo--p2">
+
+                         <img srcset="/img/nat-3.jpg 300w, /img/nat-3-large.jpg 1000w" 
+                         sizes="(max-width: 56.25em) 20vw, (max-width: 37.5em) 30vw, 18.75em"
+                          alt="pic-3" 
+                          src= "/img/nat-3-large.jpg"
+                          class="composition__photo composition__photo--p3">
+                       <!-- !-- <img src="./img/nat-1-large.jpg" alt="" class="composition__photo composition__photo--p1">
                         <img src="./img/nat-2-large.jpg" alt="" class="composition__photo composition__photo--p2">
-                        <img src="./img/nat-3-large.jpg" alt="" class="composition__photo composition__photo--p3">
+                        <img src="./img/nat-3-large.jpg" alt="" class="composition__photo composition__photo--p3"> --! -->
                     </div>
                 </div>
             </div>
@@ -330,7 +347,10 @@
 
     <footer class="footer">
         <div class="footer_logo-box">
-            <img src="/img/logo-green-2x.png" alt="footer-logo" class="footer_logo">
+            <picture class="footer_logo">
+                <source srcset="/img/logo-green-small-1x.png 1x, /img/logo-green-small-1x.png 1x" media="(max-width: 37.5em)">
+                <img srcset="/img/logo-green-1x.png 1x, /img/logo-green-2x.png 2x" alt="footer-logo" class="footer_logo">
+            </picture>
         </div>
         <div class="row">
             <div class="col-1-of-2">

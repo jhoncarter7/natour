@@ -5,8 +5,8 @@
     }
 
     &_button {
-        height: 7rem;
-        width: 7rem;
+        height: 6.5rem;
+        width: 6.5rem;
         border-radius: 50%;
         background-color: $color-white;
         position: fixed;
@@ -14,11 +14,15 @@
         right: 5rem;
         z-index: 300;
         text-align: center;
+        @include respond (phone){
+            top: 1.5rem;
+            right: 2rem;
+        }
     }
 
     &_background {
-        height: 6rem;
-        width: 6rem;
+        height: 5rem;
+        width: 5rem;
         border-radius: 50%;
         background-image: radial-gradient($primary-light-color, $primary-dark-color);
         position: fixed;
@@ -28,7 +32,10 @@
 
         transition: transform .6s cubic-bezier(0.83, 0, 0.17, 1);
 
-
+        @include respond (phone){
+            top: 2.9rem;
+            right: 3rem;
+        }
 
     }
 

@@ -14,7 +14,9 @@ font-size: 4rem;
    background-image: linear-gradient(to right, $primary-light-color, $primary-dark-color);
    -webkit-background-clip: text;
    color: transparent;
- 
+   @include respond (tab-port){
+    margin-bottom: 0rem;
+}
     }
 
     &:hover{
