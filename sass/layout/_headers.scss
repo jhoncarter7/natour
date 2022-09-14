@@ -8,33 +8,36 @@
    
     position: relative;
 
+ 
+
     @include respond(tab-port) {
         -wbkit-clip-path: polygon(0 0, 100% 0, 100% 80vh, 0 100%);
-        clip-path: polygon(0 0, 100% 0, 100% 80vh, 0 100%);
-        height: 80vh;
-
+        clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+    
     }
+
+    @supports ( (-webkit-clip-path: polygon(0 0)) or (clip-path: polygon(0 0))){
+        -wbkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+        clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+        height: 95vh;
+    }
+    
+    @media only screen and (min-resolution: 192dpi) and (min-width: 37.5em),
+    (-webkit-min-device-pixel-ratio: 2) and (min-width: 37.5em),
+    (min-width: 125em) {
+        background-image: linear-gradient(to right bottom,
+        rgba($primary-light-color, 0.8),
+        rgba($primary-color, 0.8)), url("../img/hero.jpg");
+    }
+    
+  
+    
     @include respond (phone){
         -wbkit-clip-path: polygon(0 0, 100% 0, 100% 60vh, 0 100%);
         clip-path: polygon(0 0, 100% 0, 100% 60vh, 0 100%);
         height: 70vh;
 
     }
-
-    @media only screen and (min-resolution: 192dpi) and (min-width: 37.5em),
-    (-webkit-min-device-pixel-ratio: 2) and (min-width: 37.5em),
-    (min-width: 125em) {
-        background-image: linear-gradient(to right bottom,
-                rgba($primary-light-color, 0.8),
-                rgba($primary-color, 0.8)), url("../img/hero.jpg");
-    }
-
-@supports ((-webkit-clip-path: polygon(0 0)) or (clip-path: polygon(0 0))){
-    -wbkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
-    clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
-    height: 95vh;
-}
-
     &__logo-box {
         position: absolute;
         top: 4rem;
