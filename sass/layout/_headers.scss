@@ -9,8 +9,16 @@
     position: relative;
 
     @include respond(tab-port) {
-        -wbkit-clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
-        clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
+        -wbkit-clip-path: polygon(0 0, 100% 0, 100% 80vh, 0 100%);
+        clip-path: polygon(0 0, 100% 0, 100% 80vh, 0 100%);
+        height: 80vh;
+
+    }
+    @include respond (phone){
+        -wbkit-clip-path: polygon(0 0, 100% 0, 100% 60vh, 0 100%);
+        clip-path: polygon(0 0, 100% 0, 100% 60vh, 0 100%);
+        height: 70vh;
+
     }
 
     @media only screen and (min-resolution: 192dpi) and (min-width: 37.5em),
